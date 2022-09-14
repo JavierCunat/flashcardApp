@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/flashcard_question"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="What is the best mobile development language to learn?"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:background="@drawable/flashcard_background"
+        android:elevation="5dp"
+        />
+
+    <TextView
+        android:id="@+id/flashcard_answer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:text="Kotlin!"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        android:background="#FFFF00"
+        android:textColor="#FFFFFF"
+        />
+        <!-- android:layout_below="@id/flashcard_question" -->
+
+
+</RelativeLayout>
