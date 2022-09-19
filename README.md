@@ -14,4 +14,4 @@
 - [x] Further customize and style the card
 - [x] Add a button that will toggle hiding and showing the answer choices
 
-
+<img src="https://github.com/JavierCunat/flashcardApp/blob/322c03f54467cd259c145fe5a6f549260a5fe8de/lab2flashcardApp.gif" width="250">
