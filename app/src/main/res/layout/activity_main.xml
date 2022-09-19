@@ -4,18 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
 
     <TextView
         android:id="@+id/flashcard_question"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:text="What is the best mobile development language to learn?"
+        android:text="What HTTP response status code range indicates client error response?"
         android:textSize="40sp"
         android:gravity="center"
         android:background="@drawable/flashcard_background"
         android:elevation="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="7.5dp"
+        android:layout_marginRight="7.5dp"
         />
 
     <TextView
@@ -23,13 +27,75 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center"
-        android:text="Kotlin!"
+        android:text="Code Range 400-499"
         android:textSize="40sp"
         android:visibility="invisible"
         android:background="#FFFF00"
         android:textColor="#FFFFFF"
         />
         <!-- android:layout_below="@id/flashcard_question" -->
+    <TextView
+        android:id="@+id/answerchoice_one"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Code Range 100-199"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:background="#D3D3D3"
+        android:textColor="#0B0B45"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp" />
+
+    <TextView
+        android:id="@+id/answerchoice_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Code Range 200-299"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:background="#D3D3D3"
+        android:textColor="#0B0B45"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="225dp" />
+
+    <TextView
+        android:id="@+id/answerchoice_three"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Code Range 300-399"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:background="#D3D3D3"
+        android:textColor="#0B0B45"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="150dp" />
+
+    <TextView
+        android:id="@+id/answerchoice_four"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Code Range 400-499"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:background="#D3D3D3"
+        android:textColor="#0B0B45"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp" />
+
+    <ImageView
+        android:id="@+id/toggle_choices_visibility"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="175dp"
+        android:layout_marginLeft="175dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="196dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/eyeopen_foreground"
+        />
 
 
 </RelativeLayout>
