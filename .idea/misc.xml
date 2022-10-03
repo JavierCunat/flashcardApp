@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/javie/AndroidStudioProjects/FlashCardApp/app/src/main/res/drawable/addbutton_background.xml" value="0.1585" />
         <entry key="..\:/Users/javie/AndroidStudioProjects/FlashCardApp/app/src/main/res/drawable/eyeopen_background.xml" value="0.15" />
+        <entry key="..\:/Users/javie/AndroidStudioProjects/FlashCardApp/app/src/main/res/layout/activity_add_card.xml" value="0.1" />
         <entry key="..\:/Users/javie/AndroidStudioProjects/FlashCardApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/javie/AndroidStudioProjects/FlashCardApp/app/src/main/res/mipmap-anydpi-v26/addbutton.xml" value="0.121" />
       </map>
     </option>
   </component>

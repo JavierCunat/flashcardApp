@@ -97,5 +97,15 @@
         android:src="@drawable/eyeopen_foreground"
         />
 
+    <ImageView
+        android:id="@+id/addButtonImage"
+        android:layout_height="70dp"
+        android:layout_width="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/addbutton_foreground" />
+
+
+
 
 </RelativeLayout>

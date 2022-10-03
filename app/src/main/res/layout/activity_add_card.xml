@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCardActivity"
+    tools:ignore="ExtraText">
+
+    <EditText
+        android:id="@+id/editTextQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:hint="Type a question!"
+        android:inputType="textMultiLine"
+        />
+
+
+    <EditText
+        android:id="@+id/editTextAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Type an answer!"
+        android:inputType="textMultiLine" />
+
+    <ImageView
+        android:id="@+id/cancelButtonImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        app:srcCompat="@drawable/cancelbutton_foreground"
+        />
+
+    <ImageView
+        android:id="@+id/saveButtonImage"
+        android:layout_height="65dp"
+        android:layout_width="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/savebutton_foreground"
+        />
+
+
+
+
+
+
+
+</RelativeLayout>
