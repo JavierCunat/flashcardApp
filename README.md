@@ -6,9 +6,7 @@
 Flashcard app updated to include an add card screen where the user can upload their own flashcard question and answer
 
 ### App Walk-though
-<img src="YOUR_GIF_URL_HERE" width=200><br>
-
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
+<img src="https://github.com/JavierCunat/flashcardApp/blob/main/lab4flashcardApp.gif" width=200><br>
 
 ## Required
 - [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
@@ -30,6 +28,9 @@ Flashcard app updated to include an add card screen where the user can upload th
 ### App Description
 Flashcard app in which the user can answer one question and chose between four different answer choices in which the choice turns either green if correct or red if incorrect, the user can also tap the question to see the answer and can hide/unhide answer choices by tapping the open/closed eye button on bottom of screen.
 
+### App Walkthrough
+<img src="https://github.com/JavierCunat/flashcardApp/blob/322c03f54467cd259c145fe5a6f549260a5fe8de/lab2flashcardApp.gif" width="250">
+
 ## Required
 - [x] Create New Project in Android Studio
 - [x] Add a view for the front side of the flashcard to display the question
@@ -45,4 +46,4 @@ Flashcard app in which the user can answer one question and chose between four d
 - [x] Further customize and style the card
 - [x] Add a button that will toggle hiding and showing the answer choices
 
-<img src="https://github.com/JavierCunat/flashcardApp/blob/322c03f54467cd259c145fe5a6f549260a5fe8de/lab2flashcardApp.gif" width="250">
+
