@@ -6,7 +6,7 @@
 Flashcard app updated to include an add card screen where the user can upload their own flashcard question and answer
 
 ### App Walk-though
-<img src="https://github.com/JavierCunat/flashcardApp/blob/main/lab4flashcardApp.gif" width=200><br>
+<img src="https://github.com/JavierCunat/flashcardApp/blob/main/lab4flashcardAppFixed.gif" width=200><br>
 
 ## Required
 - [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
