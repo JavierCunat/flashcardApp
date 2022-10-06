@@ -3,7 +3,7 @@
 ## Lab II
 
 ### App Description
-Flashcard app updated to include an add card screen where the user can upload their own flashcard question and answer
+Flashcard app updated to include an add card screen where the user can upload their own flashcard question and answer alongside presenting and dismissing screens in an animated fashion, and passing between view controllers.
 
 ### App Walk-though
 <img src="https://github.com/JavierCunat/flashcardApp/blob/main/lab4flashcardAppFixed.gif" width=200><br>
