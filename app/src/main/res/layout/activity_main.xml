@@ -105,6 +105,15 @@
         android:layout_alignParentBottom="true"
         app:srcCompat="@drawable/addbutton_foreground" />
 
+    <ImageView
+        android:id="@+id/nextButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/nextbutton_foreground"
+        android:layout_marginLeft="314dp"
+        android:layout_marginTop="214dp"
+        />
+
 
 
 

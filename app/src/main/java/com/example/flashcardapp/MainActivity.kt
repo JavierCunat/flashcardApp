@@ -8,8 +8,14 @@ import android.widget.TextView
 import android.view.View
 import android.widget.ImageView
 import androidx.activity.result.contract.ActivityResultContracts
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
+
+    /* ------------------------ Adding Database to FlashcardApp ------------------------- */
+    lateinit var flashcardDatabase: FlashcardDatabase
+    var allFlashcards = mutableListOf<Flashcard>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,11 +25,18 @@ class MainActivity : AppCompatActivity() {
         val flashcardAnswer = findViewById<TextView>(R.id.flashcard_answer)
 
 
-        flashcardQuestion.setOnClickListener {
-            flashcardQuestion.visibility = View.INVISIBLE
-            flashcardAnswer.visibility = View.VISIBLE
+            flashcardQuestion.setOnClickListener {
+                    flashcardQuestion.visibility = View.INVISIBLE
+                    flashcardAnswer.visibility = View.VISIBLE
 
-        }
+                }
+             flashcardAnswer.setOnClickListener {
+                    flashcardQuestion.visibility = View.VISIBLE
+                    flashcardAnswer.visibility = View.INVISIBLE
+                }
+
+
+
         /* --------------------- Answer Choice Background Functions ---------------------- */
 
         val answerChoiceOne = findViewById<View>(R.id.answerchoice_one)
@@ -87,6 +100,13 @@ class MainActivity : AppCompatActivity() {
                 flashcardQuestion.text = questionString
                 flashcardAnswer.text = answerString
 
+                if (questionString != null && answerString != null) {
+                    flashcardDatabase.insertCard(Flashcard(questionString, answerString))
+                    // Update set of flashcards to include new card
+                    allFlashcards = flashcardDatabase.getAllCards().toMutableList()
+                } else {
+                    Log.e("TAG", "Missing question or answer to input into database. Question is $questionString and answer is $answerString")
+                }
 
 
                 Log.i("MainActivity", "Question: $questionString")
@@ -94,7 +114,6 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Log.i("MainActivity", "Returned null data from AddCardActivity")
             }
-
 
         }
 
@@ -108,8 +127,51 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        flashcardDatabase = FlashcardDatabase(this)
+        allFlashcards = flashcardDatabase.getAllCards().toMutableList()
+
+        if (allFlashcards.size > 0) {
+            findViewById<TextView>(R.id.flashcard_question).text = allFlashcards[0].question
+            findViewById<TextView>(R.id.flashcard_answer).text = allFlashcards[0].answer
+        }
+
+
+        /* ----------------- Adding allowing user to browse through multiple cards ------------- */
+
+        var currentCardDisplayedIndex = 0
+        val nextButton = findViewById<ImageView>(R.id.nextButton)
+        nextButton.setOnClickListener{
+            if (allFlashcards.size == 0) {
+                // return here, so that the rest of the code in this onClickListener doesn't execute
+               return@setOnClickListener
+        }
+            currentCardDisplayedIndex++
+
+            if(currentCardDisplayedIndex >= allFlashcards.size) {
+                currentCardDisplayedIndex = 0
+            }
+
+            allFlashcards = flashcardDatabase.getAllCards().toMutableList()
+
+            val question = allFlashcards[currentCardDisplayedIndex].question
+            val answer = allFlashcards[currentCardDisplayedIndex].answer
+
+            flashcardQuestion.text = question
+            flashcardAnswer.text = answer
+
+
+
+
+            }
+
 
 
     }
+
+
+
+
+
+
 }
 
