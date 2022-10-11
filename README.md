@@ -7,7 +7,7 @@ Flashcard App updated to save multiple user created cards and toggle through the
 
 ### App Walk-though
 
-<img src="https://github.com/JavierCunat/flashcardApp/blob/main/lab5flashcardApp.gif" width=200><br>
+<img src="https://github.com/JavierCunat/flashcardApp/blob/main/lab5flashcardAppFixed.gif" width=200><br>
 
 ## Required
 - [x] User can create a card and still see their created card when the app is relaunched.
