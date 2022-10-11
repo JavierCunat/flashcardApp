@@ -1,12 +1,32 @@
 # flashcardApp
 
+## Lab III
+
+### App Description
+Flashcard App updated to save multiple user created cards and toggle through them to review their cards
+
+### App Walk-though
+
+<img src="https://github.com/JavierCunat/flashcardApp/blob/main/lab5flashcardApp.gif" width=200><br>
+
+## Required
+- [x] User can create a card and still see their created card when the app is relaunched.
+- [x] User can create muliple cards and browse through all created cards
+
+## Optional
+- [ ] User can delete a card and no longer see it in their deck anymore
+- [ ] Flashcards are shown in random order instead of the order they were created in
+- [ ] User can edit a card and see the edit saved when they browse through their deck of cards
+- [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
+
+
 ## Lab II
 
 ### App Description
-Flashcard app updated to include an add card screen where the user can upload their own flashcard question and answer
+Flashcard app updated to include an add card screen where the user can upload their own flashcard question and answer alongside presenting and dismissing screens in an animated fashion, and passing between view controllers.
 
 ### App Walk-though
-<img src="https://github.com/JavierCunat/flashcardApp/blob/main/lab4flashcardApp.gif" width=200><br>
+<img src="https://github.com/JavierCunat/flashcardApp/blob/main/lab4flashcardAppFixed.gif" width=200><br>
 
 ## Required
 - [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
