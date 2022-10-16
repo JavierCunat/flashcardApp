@@ -158,11 +158,23 @@ class MainActivity : AppCompatActivity() {
 
             flashcardQuestion.text = question
             flashcardAnswer.text = answer
+        }
 
+        /* -------------- Allowing User to Delete FlashCards from Deck ------------------------ */
 
+        val trashcanButton = findViewById<ImageView>(R.id.trashcanButton)
+        trashcanButton.setOnClickListener{
+            val flashcardQuestionToDelete = findViewById<TextView>(R.id.flashcard_question).text.toString()
+            flashcardDatabase.deleteCard(flashcardQuestionToDelete)
+            allFlashcards = flashcardDatabase.getAllCards().toMutableList()
+            currentCardDisplayedIndex--
 
-
+            if(currentCardDisplayedIndex == 0){
+                //Display Empty State Which is the Hard Code written Flashcard
+            val question = flashcardQuestion
+            val answer = flashcardAnswer
             }
+        }
 
 
 

@@ -12,7 +12,7 @@
         android:id="@+id/flashcard_question"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:text="What HTTP response status code range indicates client error response?"
+        android:text="There are no current Flashcards. Make your own!"
         android:textSize="40sp"
         android:gravity="center"
         android:background="@drawable/flashcard_background"
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center"
-        android:text="Code Range 400-499"
+        android:text="There are no current Flashcard Answers"
         android:textSize="40sp"
         android:visibility="invisible"
         android:background="#FFFF00"
@@ -113,6 +113,15 @@
         android:layout_marginLeft="314dp"
         android:layout_marginTop="214dp"
         />
+
+    <ImageView
+        android:id="@+id/trashcanButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/trashcanbutton_foreground"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="186dp"
+    />
 
 
 
