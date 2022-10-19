@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import android.view.View
+import android.view.ViewAnimationUtils
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.snackbar.Snackbar
@@ -28,6 +31,33 @@ class MainActivity : AppCompatActivity() {
             flashcardQuestion.setOnClickListener {
                     flashcardQuestion.visibility = View.INVISIBLE
                     flashcardAnswer.visibility = View.VISIBLE
+
+/* ----------------------------- Animation for Revealing Answer ------------------------------- */
+
+// get the center for the clipping circle
+
+// get the center for the clipping circle
+                val cx = flashcardAnswer.width / 2
+                val cy = flashcardAnswer.height / 2
+
+// get the final radius for the clipping circle
+
+// get the final radius for the clipping circle
+                val finalRadius = Math.hypot(cx.toDouble(), cy.toDouble()).toFloat()
+
+// create the animator for this view (the start radius is zero)
+
+// create the animator for this view (the start radius is zero)
+                val anim = ViewAnimationUtils.createCircularReveal(flashcardAnswer, cx, cy, 0f, finalRadius)
+
+// hide the question and show the answer to prepare for playing the animation!
+
+// hide the question and show the answer to prepare for playing the animation!
+                flashcardQuestion.visibility = View.INVISIBLE
+                flashcardAnswer.visibility = View.VISIBLE
+
+                anim.duration = 3000
+                anim.start()
 
                 }
              flashcardAnswer.setOnClickListener {
@@ -124,6 +154,7 @@ class MainActivity : AppCompatActivity() {
             // Launch EndingActivity with the resultLauncher so we can execute more code
             // once we come back here from EndingActivity
             resultLauncher.launch(intent)
+              overridePendingTransition(R.anim.right_in, R.anim.left_out)
         }
 
 
@@ -145,19 +176,50 @@ class MainActivity : AppCompatActivity() {
                 // return here, so that the rest of the code in this onClickListener doesn't execute
                return@setOnClickListener
         }
-            currentCardDisplayedIndex++
 
-            if(currentCardDisplayedIndex >= allFlashcards.size) {
-                currentCardDisplayedIndex = 0
-            }
+            // Load the resource animation files
+            val leftOutAnim = AnimationUtils.loadAnimation(it.context, R.anim.left_out)
+            val rightInAnim = AnimationUtils.loadAnimation(it.context, R.anim.right_in)
 
-            allFlashcards = flashcardDatabase.getAllCards().toMutableList()
+            // Play the two animations in sequence by setting listeners
 
-            val question = allFlashcards[currentCardDisplayedIndex].question
-            val answer = allFlashcards[currentCardDisplayedIndex].answer
+            leftOutAnim.setAnimationListener(object : Animation.AnimationListener {
+                override fun onAnimationStart(animation: Animation?) {
+                    // this method is called when the animation first starts
+                    flashcardAnswer.visibility = View.INVISIBLE
+                    flashcardQuestion.visibility = View.VISIBLE
+                }
 
-            flashcardQuestion.text = question
-            flashcardAnswer.text = answer
+                override fun onAnimationEnd(animation: Animation?) {
+                    // this method is called when the animation is finished playing
+                    flashcardQuestion.startAnimation(rightInAnim)
+
+                    currentCardDisplayedIndex++
+
+                    if(currentCardDisplayedIndex >= allFlashcards.size) {
+                        currentCardDisplayedIndex = 0
+                    }
+
+                    allFlashcards = flashcardDatabase.getAllCards().toMutableList()
+
+                    val question = allFlashcards[currentCardDisplayedIndex].question
+                    val answer = allFlashcards[currentCardDisplayedIndex].answer
+
+                    flashcardQuestion.text = question
+                    flashcardAnswer.text = answer
+
+                    flashcardAnswer.visibility = View.INVISIBLE
+                    flashcardQuestion.visibility = View.VISIBLE
+                }
+
+                override fun onAnimationRepeat(animation: Animation?) {
+                    // we don't need to worry about this method
+                }
+            })
+
+            flashcardQuestion.startAnimation(leftOutAnim)
+
+
         }
 
         /* -------------- Allowing User to Delete FlashCards from Deck ------------------------ */
