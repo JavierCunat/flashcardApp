@@ -3,7 +3,7 @@
 ## Lab III
 
 ### App Description
-Flashcard App updated to save multiple user created cards and toggle through them to review their cards
+Flashcard App updated to save multiple user created cards and toggle through them to review their cards, users also have the option to delete these flashcards and 'empty' state is displayed when the flashcard deck is empty.
 
 ### App Walk-though
 
@@ -14,7 +14,7 @@ Flashcard App updated to save multiple user created cards and toggle through the
 - [x] User can create muliple cards and browse through all created cards
 
 ## Optional
-- [ ] User can delete a card and no longer see it in their deck anymore
+- [x] User can delete a card and no longer see it in their deck anymore
 - [ ] Flashcards are shown in random order instead of the order they were created in
 - [ ] User can edit a card and see the edit saved when they browse through their deck of cards
 - [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
