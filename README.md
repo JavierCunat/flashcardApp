@@ -1,5 +1,27 @@
 # flashcardApp
 
+## Lab IV
+
+### App Description
+App has a new Icon Launcher as lightning bolt and a white background to symbolize flashcards. When user wants to add a new card there is a gentle "slide" transition, alongside when the user presses the next button to toggle through flashcard there is also a "slide" transition, finally when the user wants to reveal the answer there is a "reveal" transition for UI/UX purposes. 
+
+### App Walk-though
+`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
+
+<img src="YOUR_GIF_URL_HERE" width=200><br>
+
+## Required
+- [x] User sees a transition animation when going from the main screen to the add card screen.
+- [x] User sees a reveal animation when the flashcard is tapped and the answer is shown
+- [x] User sees flashcards animating in / out when the 'next' button is tapped
+
+## Optional
+- [x] Extra styling is added!
+- [ ] User sees a countdown timer for each question
+- [ ] User sees a 'card flip' animation when the card is tapped
+- [ ] User sees a celebration animation with confetti when they answer a question correctly
+
+
 ## Lab III
 
 ### App Description
