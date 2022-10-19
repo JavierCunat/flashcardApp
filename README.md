@@ -3,7 +3,7 @@
 ## Lab IV
 
 ### App Description
-App has a new Icon Launcher as lightning bolt and a white background to symbolize "flash" cards. When user wants to add a new card there is a gentle "slide" transition, alongside when the user presses the next button to toggle through flashcard there is also a "slide" transition, finally when the user wants to reveal the answer there is a "reveal" transition for UI/UX purposes. 
+App has a new Icon Launcher as lightning bolt and a white background to symbolize "flash" cards. When user wants to add a new card there is a gentle "slide" transition, alongside when the user presses the next button to toggle through the set of flashcards there is also a "slide" transition, finally when the user wants to reveal the answer there is a "reveal" transition for UI/UX purposes. 
 
 ### App Walk-though
 
